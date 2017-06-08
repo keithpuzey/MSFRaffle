@@ -6,12 +6,17 @@
     }
     .message {
         font-size: 2em;
+        margin: 7px 0;
     }
     @media screen and (max-width: 48em) {
         .painter {
             background-size: 73px 185px;
             width: 73px;
             height: 185px;
+        }
+
+        .message {
+            font-size: 1em;
         }
     }
 </style>

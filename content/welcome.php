@@ -29,9 +29,6 @@ if(isset($_POST[$nameInput]) && !empty($_POST[$nameInput])) {
 ?>
 
 <style scoped>
-    h1, h2, h3 {
-        text-align: center;
-    }
     .stop {
         width: 200px;
         height: 300px;
@@ -58,7 +55,7 @@ if(isset($_POST[$nameInput]) && !empty($_POST[$nameInput])) {
 
 </style>
 
-<div class="pure-u-1 pure-u-md-1">
+<div class="pure-u-1 pure-u-md-1 centered-text">
     <div class="horizontal-center <?=$icon?>"></div>
     <h3><?=$message?></h3>
 </div>

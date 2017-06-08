@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php if ($this->refresh) {?>
-        <meta http-equiv="refresh" content="10">
+<!--        <meta http-equiv="refresh" content="10">-->
     <?php } ?>
 
     <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
 
     <?php $this->axaSnippet(); ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <style type="text/css">
         * { box-sizing: border-box; }
@@ -152,6 +154,10 @@
             }
             header h1 { font-size: 4em; margin-top: 0.6em; }
             header h3 { font-size: 1em; }
+
+            article content {
+                font-size: 200%;
+            }
         }
     </style>
 </head>
