@@ -1,0 +1,8 @@
+# IntelliJ project files
+.idea
+*.iml
+
+# data files
+mydata.txt
+winnersData.txt
+error_log
