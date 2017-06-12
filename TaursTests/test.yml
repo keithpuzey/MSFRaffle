@@ -1,3 +1,10 @@
+execution:
+- concurrency: 5
+  hold-for: 15s
+  scenario: simple
 
-test2
-test3
+scenarios:
+  simple:
+    think-time: 0.75
+    requests:
+    - http://172.17.17.80:90/CAWebStore-master/index.php
