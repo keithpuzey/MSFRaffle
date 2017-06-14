@@ -7,4 +7,4 @@ scenarios:
   simple:
     think-time: 0.75
     requests:
-    - http://emea.cdbu.io
+    - http://emea-preprod.cdbu.io
