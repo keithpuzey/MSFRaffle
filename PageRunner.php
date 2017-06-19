@@ -18,8 +18,6 @@ class PageRunner {
 
     private $page;
 
-    public $refresh = false;
-
     function __construct() {
         $path = trim(parse_url(urldecode($_SERVER["REQUEST_URI"]), PHP_URL_PATH), '/');
         // clear file name from path start (it optional in the URL)
@@ -30,10 +28,6 @@ class PageRunner {
         list($this->page) = explode('/', $path);
         if (!$this->page) {
             $this->page = Pages::HOME;
-        }
-
-        if ($this->page === Pages::ADMIN) {
-            $this->refresh = true;
         }
     }
 

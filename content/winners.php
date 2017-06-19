@@ -26,10 +26,6 @@ if ($count == 0) {
 ?>
 
 <style scoped>
-    h1, h2, h3 {
-        text-align: center;
-        /*font-size: 1em;*/
-    }
     content {
         height: 100%;
     }
@@ -45,21 +41,31 @@ if ($count == 0) {
         text-align: center;
     }
     .trophy {
-        width: 117px;
         height: 155px;
+    }
+    spacer { height: 25px; }
+
+    .l-box h3 { margin-top: 0.5em; }
+
+    @media screen and (max-width: 35.5em) {
+        /* up to small sized displays */
+        .chaching { width: 230px; }
+        .chaching img { height: 150px; }
+        .trophy {
+            height: 76px;
+        }
     }
 </style>
 
 <div class="pure-u-1 pure-u-md-1">
     <div class="chaching horizontal-center"><img src="/assets/images/cha_ching.png"/></div>
 </div>
+<spacer class="pure-u-1"></spacer>
 <?php if ($notenough) { ?>
-    <h1 class="error pure-u-1 pure-u-md-1"><?=$notenough?></h1>
-<?php } else { ?>
-    <?php foreach ($winners as &$winner) { ?>
-        <div class="pure-u-1 pure-u-md-1-<?=$winnersCount?> l-box">
-            <img class="trophy horizontal-center" src="/assets/images/trophy.png"/>
-            <h3><?=$winner?></h3>
-        </div>
-    <?php } ?>
-<?php } ?>
+    <h1 class="error pure-u-1 pure-u-md-1 centered-text"><?=$notenough?></h1>
+<?php } else { foreach ($winners as &$winner) { ?>
+    <div class="pure-u-1 pure-u-md-1-<?=$winnersCount?> l-box centered-text">
+        <img class="trophy horizontal-center" src="/assets/images/trophy.png"/>
+        <h3><?=$winner?></h3>
+    </div>
+<?php } } ?>

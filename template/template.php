@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php if ($this->refresh) {?>
-<!--        <meta http-equiv="refresh" content="10">-->
-    <?php } ?>
 
     <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
@@ -23,7 +20,7 @@
     <style type="text/css">
         * { box-sizing: border-box; }
 
-        // fonts
+        /* fonts */
         @font-face {
             font-family: 'CA Sans';
             src: url("/assets/fonts/ca-sans/CSSansWebRegular/ca_sans_web-regular.eot");
@@ -78,36 +75,8 @@
             flex: 1 0 auto;
         }
 
-        header {
-            background-color: #e88007;
-            position: relative;
-            width: 100%;
-            color: white;
-        }
-        header logo { }
-        header logo icon {
-            display: block;
-            background: url(/assets/images/logo.png) no-repeat;
-            width: 190px;
-            height: 170px;
-            margin: 0 auto;
-        }
-
-        header text { text-align: center; }
-        header h1 { font-size: 2em; margin-bottom: 0; margin-top: 0; }
-        header h3 { font-size: 1em; margin-top: 0; }
-
-        article {
-            color: #444444;
-        }
-        article content {
-            display: block;
-            max-width: 1024px;
-            /*-webkit-box-direction: normal;*/
-        }
-
         .flex-column {
-            flex: 1 1 0%;
+            /*flex: 1 1 0%;*/
             display: flex;
             flex-direction: column;
             align-content: flex-start;
@@ -134,46 +103,29 @@
             display: block !important;
         }
 
-        @media screen and (max-width: 48em) {
-            article content {
-                max-width: 100%;
-            }
+        .bold { font-weight: bold; }
+
+        .l-box { padding: 1em; }
+
+        .blue-button {
+            color: white;
+            background-color: #7CB8C9;
+            font-weight: bold;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            /*padding: 0.2em 0;*/
         }
 
-        @media screen and (min-width: 64em) {
-            header logo.pure-u-lg-1-2 {
-                width: 190px;
-                padding-left: 10px;
-                /*height: 170px;*/
-            }
-            header logo icon {
-                margin: 0.5em auto;
-            }
-            header text.pure-u-lg-1-2 {
-                width: 80%;
-            }
-            header h1 { font-size: 4em; margin-top: 0.6em; }
-            header h3 { font-size: 1em; }
-
-            article content {
-                font-size: 200%;
-            }
+        .icon {
+            background: none no-repeat center center;
+            background-size: contain;
         }
     </style>
 </head>
 <body>
     <body-wrapper>
-        <header class="pure-g">
-            <logo class="pure-u-1 pure-u-lg-1-2"><icon></icon></logo>
-            <text class="pure-u-1 pure-u-lg-1-2">
-                <h1><?php $this->headerText(); ?></h1>
-                <h3 style="letter-spacing: 2px;"><?php $this->subHeaderText(); ?></h3>
-            </text>
-        </header>
-
-        <article class="flex-column center-center">
-            <content class="pure-g"><?php $this->pageContent(); ?></content>
-        </article>
+        <?php include "template/header.php"; ?>
+        <?php include "template/body.php"; ?>
     </body-wrapper>
 </body>
 </html>

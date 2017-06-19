@@ -4,28 +4,22 @@ $count = file_exists($dataFileName) ? COUNT(FILE($dataFileName)) : 0;
 ?>
 
 <style scoped>
-    /*h2, h3 { font-size: 1em; }*/
-    /*h1 { font-size: 2em; }*/
-    /*@media screen and (min-width: 64em) {
-        h1 { font-size: 4em; }
-        h3 { font-size: 2em; }
-    }*/
-
     content {
         height: 100%;
         padding-top: 50px;
     }
 
     .spinner {
-        width: 168px;
         height: 163px;
-        background: url(/assets/images/loader.png) no-repeat center center;
+        background-image: url(/assets/images/loader.png);
         -webkit-transform: translateZ(0);
         -ms-transform: translateZ(0);
         transform: translateZ(0);
         -webkit-animation: load8 1.1s infinite linear;
         animation: spin 1.1s infinite linear;
     }
+
+    .link { color: rgb(125, 185, 202); }
 
     @-webkit-keyframes spin {
         0% {
@@ -76,7 +70,7 @@ $count = file_exists($dataFileName) ? COUNT(FILE($dataFileName)) : 0;
 </script>
 
 <div class="pure-u-1 centered-text">
-    <h3>1. GO TO <a href="http://emea.cdbu.io">http://emea.cdbu.io</a></h3>
+    <h3>1. GO TO <a class="link" href="http://raffle.cdbu.io">http://raffle.cdbu.io</a></h3>
     <h3>2. SUBMIT YOUR FULL NAME</h3>
     <h3>3. SHABANG! YOU'RE IN THE GAME!</h3>
 
@@ -87,10 +81,10 @@ $count = file_exists($dataFileName) ? COUNT(FILE($dataFileName)) : 0;
 
     <div id="submitBtn">
         <button onclick="getWinners()"
-                class="horizontal-center pure-button pure-button-primary pure-u-1 pure-u-md-1 pure-u-lg-2-3" <?=$count ? "" : "disabled"?>>And the winners are...</button>
+                class="horizontal-center pure-button blue-button pure-u-1 pure-u-md-1 pure-u-lg-2-3" <?=$count ? "" : "disabled"?>>And the winners are...</button>
     </div>
     <div id="loader" style="display: none;">
-        <div class="spinner horizontal-center"></div>
+        <div class="icon spinner horizontal-center"></div>
         <h3>Computing...</h3>
     </div>
 </div>
