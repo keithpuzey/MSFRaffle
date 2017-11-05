@@ -70,7 +70,7 @@ $count = file_exists($dataFileName) ? COUNT(FILE($dataFileName)) : 0;
 </script>
 
 <div class="pure-u-1 centered-text">
-    <h3>1. GO TO <a class="link" href="http://emea.cdbu.io">http://emea.cdbu.io</a></h3>
+    <h3>1. GO TO <a class="link" href="http://cdbu.io">http://cdbu.io</a></h3>
     <h3>2. SUBMIT YOUR FULL NAME</h3>
     <h3>3. SHABANG! YOU'RE IN THE GAME!</h3>
 
@@ -81,7 +81,7 @@ $count = file_exists($dataFileName) ? COUNT(FILE($dataFileName)) : 0;
 
     <div id="submitBtn">
         <button onclick="getWinners()"
-                class="horizontal-center pure-button blue-button pure-u-1 pure-u-md-1 pure-u-lg-2-3" <?=$count ? "" : "disabled"?>>And the winners are...</button>
+                class="horizontal-center pure-button blue-button pure-u-1 pure-u-md-1 pure-u-lg-2-3" <?=$count ? "" : "disabled"?>>And the winner is...</button>
     </div>
     <div id="loader" style="display: none;">
         <div class="icon spinner horizontal-center"></div>
